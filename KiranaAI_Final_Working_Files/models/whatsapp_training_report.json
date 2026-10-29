@@ -1,0 +1,32 @@
+{
+  "unique_training_phrases": 183,
+  "sources": {
+    "catalog": 157,
+    "whatsapp": 20,
+    "curated": 6
+  },
+  "classes": [
+    "AAS",
+    "AMU",
+    "BIS",
+    "BRI",
+    "BRU",
+    "COL",
+    "DAB",
+    "DET",
+    "FOR",
+    "HOR",
+    "KIS",
+    "KIT",
+    "LAY",
+    "LUX",
+    "MAG",
+    "PAR",
+    "RIN",
+    "SUR",
+    "TSL",
+    "TTP"
+  ],
+  "method": "Character n-gram TF-IDF + logistic regression, trained on catalog aliases and conservatively compatible WhatsApp variants",
+  "limitations": "Synthetic data, incompatible labels excluded, no independent held-out accuracy claim. Predictions require high confidence and catalog verification."
+}

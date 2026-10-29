@@ -1,0 +1,41 @@
+﻿sku_id,product_family_id,brand,product_name,category,pack_size,pack_unit,unit_price_inr,availability,search_aliases,family_aliases,price_type
+MAG001,MAG,Maggi,Instant Noodles,Packaged Foods,70 g,pack,15,available,Maggi Instant Noodles 70 g | maggi 70g | small maggi | chhoti maggi | maggi chota packet,maggi | noodles,illustrative_not_live
+MAG002,MAG,Maggi,Instant Noodles,Packaged Foods,140 g,pack,30,available,Maggi Instant Noodles 140 g | maggi 140g | large maggi | badi maggi,maggi | noodles,illustrative_not_live
+PAR001,PAR,Parle-G,Glucose Biscuits,Biscuits,80 g,pack,10,available,Parle-G Glucose Biscuits 80 g | parle g 80g | small parle g | chhota parle g,parle g | parle-g | parle biscuits,illustrative_not_live
+PAR002,PAR,Parle-G,Glucose Biscuits,Biscuits,250 g,pack,30,available,Parle-G Glucose Biscuits 250 g | parle g 250g | big parle g | bada parle g,parle g | parle-g | parle biscuits,illustrative_not_live
+SUR001,SUR,Surf Excel,Easy Wash Detergent Powder,Home Care,500 g,pack,68,available,Surf Excel Easy Wash Detergent Powder 500 g | surf 500g | small surf powder | surf chhota,surf | surf excel | surf powder,illustrative_not_live
+SUR002,SUR,Surf Excel,Easy Wash Detergent Powder,Home Care,1 kg,pack,130,available,Surf Excel Easy Wash Detergent Powder 1 kg | surf 1kg | large surf powder | surf bada,surf | surf excel | surf powder,illustrative_not_live
+AAS001,AAS,Aashirvaad,Whole Wheat Atta,Staples,1 kg,pack,64,available,Aashirvaad Whole Wheat Atta 1 kg | atta 1kg | small aashirvaad atta,aashirvaad | atta | wheat flour,illustrative_not_live
+AAS002,AAS,Aashirvaad,Whole Wheat Atta,Staples,5 kg,pack,315,available,Aashirvaad Whole Wheat Atta 5 kg | atta 5kg | aashirvaad atta big,aashirvaad | atta | wheat flour,illustrative_not_live
+TSL001,TSL,Tata,Salt,Staples,500 g,pack,16,available,Tata Salt 500 g | tata namak 500g | salt half kg,tata salt | namak | salt,illustrative_not_live
+TSL002,TSL,Tata,Salt,Staples,1 kg,pack,30,available,Tata Salt 1 kg | tata salt 1kg | tata namak 1kg,tata salt | namak | salt,illustrative_not_live
+FOR001,FOR,Fortune,Sunflower Oil,Staples,1 L,pack,155,available,Fortune Sunflower Oil 1 L | fortune 1 litre | oil 1 litre,fortune oil | sunflower oil | cooking oil,illustrative_not_live
+FOR002,FOR,Fortune,Sunflower Oil,Staples,5 L,pack,740,available,Fortune Sunflower Oil 5 L | fortune 5 litre | oil 5 litre,fortune oil | sunflower oil | cooking oil,illustrative_not_live
+BRI001,BRI,Britannia,Good Day Butter Cookies,Biscuits,60 g,pack,10,available,Britannia Good Day Butter Cookies 60 g | good day small | good day 60g,good day | britannia good day,illustrative_not_live
+BRI002,BRI,Britannia,Good Day Butter Cookies,Biscuits,200 g,pack,40,available,Britannia Good Day Butter Cookies 200 g | good day 200g | good day big,good day | britannia good day,illustrative_not_live
+LAY001,LAY,Lay’s,Classic Salted Chips,Snacks,48 g,pack,20,available,Lay’s Classic Salted Chips 48 g | lays 48g | lays small | blue lays small,lays | lay’s | chips,illustrative_not_live
+LAY002,LAY,Lay’s,Classic Salted Chips,Snacks,82 g,pack,30,available,Lay’s Classic Salted Chips 82 g | lays 82g | lays large,lays | lay’s | chips,illustrative_not_live
+COL001,COL,Colgate,Strong Teeth Toothpaste,Personal Care,100 g,pack,60,available,Colgate Strong Teeth Toothpaste 100 g | colgate 100g | small colgate paste,colgate | toothpaste,illustrative_not_live
+COL002,COL,Colgate,Strong Teeth Toothpaste,Personal Care,200 g,pack,110,available,Colgate Strong Teeth Toothpaste 200 g | colgate 200g | big colgate paste,colgate | toothpaste,illustrative_not_live
+LUX001,LUX,Lux,Soap Bar,Personal Care,100 g,pack,35,available,Lux Soap Bar 100 g | lux soap 100g | small lux,lux | lux sabun,illustrative_not_live
+LUX002,LUX,Lux,Soap Bar,Personal Care,150 g,pack,52,available,Lux Soap Bar 150 g | lux soap 150g | big lux,lux | lux sabun,illustrative_not_live
+RIN001,RIN,Rin,Detergent Bar,Home Care,250 g,pack,20,available,Rin Detergent Bar 250 g | rin bar 250g | rin soap,rin | rin bar,illustrative_not_live
+RIN002,RIN,Rin,Detergent Bar,Home Care,500 g,pack,38,available,Rin Detergent Bar 500 g | rin bar 500g | rin large bar,rin | rin bar,illustrative_not_live
+TTP001,TTP,Tata,Tea Premium,Beverages,250 g,pack,145,available,Tata Tea Premium 250 g | tata tea 250g | small tata tea,tata tea | tea premium | chai patti,illustrative_not_live
+TTP002,TTP,Tata,Tea Premium,Beverages,500 g,pack,285,available,Tata Tea Premium 500 g | tata tea 500g | large tata tea,tata tea | tea premium | chai patti,illustrative_not_live
+BRU001,BRU,Bru,Instant Coffee,Beverages,50 g,pack,110,available,Bru Instant Coffee 50 g | bru coffee 50g | small bru,bru | bru coffee | instant coffee,illustrative_not_live
+BRU002,BRU,Bru,Instant Coffee,Beverages,100 g,pack,210,out_of_stock,Bru Instant Coffee 100 g | bru coffee 100g | big bru,bru | bru coffee | instant coffee,illustrative_not_live
+KIT001,KIT,KitKat,Chocolate Wafer,Confectionery,18.5 g,pack,20,available,KitKat Chocolate Wafer 18.5 g | kitkat 18g | small kitkat,kitkat | kit kat,illustrative_not_live
+KIT002,KIT,KitKat,Chocolate Wafer,Confectionery,36.5 g,pack,40,out_of_stock,KitKat Chocolate Wafer 36.5 g | kitkat 36g | large kitkat,kitkat | kit kat,illustrative_not_live
+HOR001,HOR,Horlicks,Classic Malt Drink,Beverages,200 g,pack,130,available,Horlicks Classic Malt Drink 200 g | horlicks 200g | small horlicks,horlicks | malt drink,illustrative_not_live
+HOR002,HOR,Horlicks,Classic Malt Drink,Beverages,500 g,pack,280,available,Horlicks Classic Malt Drink 500 g | horlicks 500g | big horlicks,horlicks | malt drink,illustrative_not_live
+DAB001,DAB,Dabur,Honey,Packaged Foods,250 g,pack,125,available,Dabur Honey 250 g | dabur honey 250g | honey small,dabur honey | honey | shahad,illustrative_not_live
+DAB002,DAB,Dabur,Honey,Packaged Foods,500 g,pack,235,available,Dabur Honey 500 g | dabur honey 500g | honey large,dabur honey | honey | shahad,illustrative_not_live
+DET001,DET,Dettol,Handwash,Personal Care,200 ml,pack,85,available,Dettol Handwash 200 ml | dettol handwash 200ml | small handwash,dettol handwash | hand wash,illustrative_not_live
+DET002,DET,Dettol,Handwash,Personal Care,750 ml,pack,195,available,Dettol Handwash 750 ml | dettol handwash 750ml | big handwash,dettol handwash | hand wash,illustrative_not_live
+BIS001,BIS,Bisleri,Packaged Drinking Water,Beverages,1 L,pack,20,available,Bisleri Packaged Drinking Water 1 L | bisleri 1 litre | water 1l,bisleri | mineral water | water bottle,illustrative_not_live
+BIS002,BIS,Bisleri,Packaged Drinking Water,Beverages,2 L,pack,35,available,Bisleri Packaged Drinking Water 2 L | bisleri 2 litre | water 2l,bisleri | mineral water | water bottle,illustrative_not_live
+AMU001,AMU,Amul,Butter,Dairy,100 g,pack,60,available,Amul Butter 100 g | amul butter 100g | small amul butter,amul butter | butter,illustrative_not_live
+AMU002,AMU,Amul,Butter,Dairy,500 g,pack,285,available,Amul Butter 500 g | amul butter 500g | large amul butter,amul butter | butter,illustrative_not_live
+KIS001,KIS,Kissan,Mixed Fruit Jam,Packaged Foods,200 g,pack,90,available,Kissan Mixed Fruit Jam 200 g | kissan jam 200g | small kissan jam,kissan jam | mixed fruit jam | jam,illustrative_not_live
+KIS002,KIS,Kissan,Mixed Fruit Jam,Packaged Foods,500 g,pack,200,available,Kissan Mixed Fruit Jam 500 g | kissan jam 500g | big kissan jam,kissan jam | mixed fruit jam | jam,illustrative_not_live

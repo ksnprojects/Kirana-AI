@@ -1,0 +1,18 @@
+KiranaAI supplementary WhatsApp dataset import
+
+Imported: 300 synthetic WhatsApp messages from user-supplied kirana_ai_synthetic_dataset.zip.
+Original messages retained: 40.
+Combined corpus: 340 message records.
+Imported unique raw texts: 145.
+
+Only data/ and core/data_loader.py were changed in runtime code.
+No app.py, ui/, catalog, store history or ML training dataset changes.
+Existing evaluation benchmark remains tied to the original 40.
+Supplemental ground truth is incompatible with original 40 SKUs and is NOT treated as validated evaluation labels.
+
+Run:
+  py -3.12 -m pip install -r requirements.txt
+  py -3.12 -m streamlit run app.py
+  py -3.12 -m pytest -q
+
+See WHATSAPP_DATASET_INTEGRATION.md for details.

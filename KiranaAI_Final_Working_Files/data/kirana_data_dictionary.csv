@@ -1,0 +1,89 @@
+﻿dataset,field,meaning,data_type,valid_values,assumptions_or_provenance
+product_catalog_processed.csv,sku_id,Sku id,str,Existing catalog SKU or null where unresolved,Never fabricate or re-key SKU identifiers.
+product_catalog_processed.csv,product_family_id,Product family id,str,Existing catalog family ID,Variants share the existing family ID.
+product_catalog_processed.csv,brand,Brand,str,As supplied by original catalog,"Preserve punctuation, case, and brand."
+product_catalog_processed.csv,product_name,Product name,str,Original catalog product name,Exact spelling for known SKUs.
+product_catalog_processed.csv,category,Category,str,One of 9 source catalog categories,Never invent catalog categories.
+product_catalog_processed.csv,pack_size,Pack size,str,"Catalog pack_size, e.g. 70 g or 1 L",Exact authoritative pack description.
+product_catalog_processed.csv,pack_unit,Pack unit,str,pack,No implicit box/carton/peti conversion.
+product_catalog_processed.csv,unit_price_inr,Unit price inr,int,Positive INR illustrative integer,Synthetic educational price: not live retail/wholesale rate.
+product_catalog_processed.csv,availability,Availability,str,available | out_of_stock,Source catalog state; no real-time stock inference.
+product_catalog_processed.csv,search_aliases,Search aliases,str,Original pipe-separated SKU-specific aliases,Never overwrite originals.
+product_catalog_processed.csv,family_aliases,Family aliases,str,Original pipe-separated product family aliases,A family alias alone does not resolve pack variant.
+product_catalog_processed.csv,price_type,Price type,str,illustrative_not_live,Preserved from source file.
+product_catalog_processed.csv,normalized_product_name,Normalized product name,str,Lowercased normalized product_name,"Derived, not authoritative."
+product_catalog_processed.csv,normalized_brand,Normalized brand,str,Lowercased normalized brand,"Derived, not authoritative."
+product_catalog_processed.csv,normalized_search_aliases,Normalized search aliases,JSON array[str],Normalized original catalog search aliases,Derived from original aliases only; does not include added synthetic aliases.
+product_catalog_processed.csv,synthetic_aliases,Synthetic aliases,JSON array[str],Added clearly synthetic pack-specific spelling aliases,Never override original aliases or map across SKU sizes.
+product_catalog_processed.csv,is_available_for_order,Is available for order,bool,true | false,True iff original availability==available.
+product_catalog_processed.csv,product_description_for_retrieval,Product description for retrieval,str,"Grounded text containing SKU, size, product, aliases, status",RAG reference only; never use to author new catalog SKUs.
+synthetic_order_history.csv,order_id,Order id,str,ORD000001 upward,One ID per synthetic order; multiple rows can share ID.
+synthetic_order_history.csv,store_id,Store id,str,STORE001 .. STORE030,Fictional prototype subset of a hypothetical 300-store network.
+synthetic_order_history.csv,order_date,Order date,date string,"ISO YYYY-MM-DD, 2026-06-29 through 2026-10-18",Consecutive Monday-Sunday synthetic weeks.
+synthetic_order_history.csv,week_number,Week number,int,1 to 16,Week 1 is 2026-06-29 to 2026-07-05.
+synthetic_order_history.csv,sku_id,Confirmed in-stock SKU actually purchased,str,Existing catalog SKU or null where unresolved,Never fabricate or re-key SKU identifiers.
+synthetic_order_history.csv,product_family_id,Product family id,str,Existing catalog family ID,Variants share the existing family ID.
+synthetic_order_history.csv,product_name,Product name,str,Original catalog product name,Exact spelling for known SKUs.
+synthetic_order_history.csv,category,Category,str,One of 9 source catalog categories,Never invent catalog categories.
+synthetic_order_history.csv,quantity,Quantity,int,Positive integer catalog selling-unit count,"Always number of individual catalog packs, never peti or carton."
+synthetic_order_history.csv,quantity_unit,Quantity unit,str,pack for confirmed order history,Source catalog selling unit.
+synthetic_order_history.csv,catalog_pack_size,Catalog pack size,str,Exact catalog pack_size for SKU,A size of one individual pack; quantity separate.
+synthetic_order_history.csv,unit_price_inr,Unit price inr,int,Positive INR illustrative integer,Synthetic educational price: not live retail/wholesale rate.
+synthetic_order_history.csv,line_total_inr,Line total inr,int,quantity × catalog unit_price_inr,"Demo only, not verified commercial quotation."
+synthetic_order_history.csv,source_type,Source type,str,synthetic_confirmed_order,"Generated purchase simulation, not actual WhatsApp traffic."
+store_profiles.csv,store_id,Store id,str,STORE001 .. STORE030,Fictional prototype subset of a hypothetical 300-store network.
+store_profiles.csv,store_name,Store name,str,Fictional named demo store,No real customer identity/location/contact.
+store_profiles.csv,store_segment,Store segment,str,One of six synthetic archetypes,Drives synthetic assortment and cadence.
+store_profiles.csv,preferred_categories,Preferred categories,JSON array[str],Subset of catalog categories,"Synthetic preferences, not observed real behaviour."
+store_profiles.csv,preferred_brands,Preferred brands,JSON array[str],Subset of catalog brands,"Synthetic preferences, not observed real behaviour."
+store_profiles.csv,typical_order_day,Typical order day,str,Monday to Sunday,Typical synthetic weekday; actual date can deviate.
+store_profiles.csv,average_order_size_band,Average order size band,str,small | medium | large,"A simulated relative order size segment, not numeric rupees."
+store_profiles.csv,ordering_frequency_band,Ordering frequency band,str,1-3 / 2-4 / 4-6 / 4-8 ordering days/month,An archetype tendency; actual order counts may vary.
+store_profiles.csv,synthetic_profile_notes,Synthetic profile notes,str,Free-text explanation,All store profiles invented.
+store_product_weekly_features.csv,store_id,Store id,str,STORE001 .. STORE030,Fictional prototype subset of a hypothetical 300-store network.
+store_product_weekly_features.csv,sku_id,Candidate SKU in complete 30 × 40 × 16 panel,str,Existing catalog SKU or null where unresolved,Never fabricate or re-key SKU identifiers.
+store_product_weekly_features.csv,week_number,Week number,int,1 to 16,Week 1 is 2026-06-29 to 2026-07-05.
+store_product_weekly_features.csv,units_ordered_this_week,Units ordered this week,int,Non-negative quantity through cutoff week,Purchase observation for exact week; includes week w.
+store_product_weekly_features.csv,units_ordered_previous_week,Units ordered previous week,int,Non-negative quantity in w-1,Zero if w=1.
+store_product_weekly_features.csv,units_ordered_last_4_weeks,Units ordered last 4 weeks,int,"Non-negative quantity over weeks max(1,w-3)..w","Historical only, including w."
+store_product_weekly_features.csv,orders_in_last_4_weeks,Orders in last 4 weeks,int,Count of distinct purchase order IDs for SKU in last 4 weeks,"Historical only, including w."
+store_product_weekly_features.csv,weeks_since_last_purchase,Weeks since last purchase,nullable int,0 or more; blank if never bought by week w,"0 if bought in current week, no artificial sentinel 999."
+store_product_weekly_features.csv,average_units_per_order,Average units per order,nullable float,"Cumulative historical average through w, 3 decimals",Blank if no purchases yet.
+store_product_weekly_features.csv,historical_reorder_interval_weeks,Historical reorder interval weeks,nullable float,Mean of gaps between observed purchase weeks through w,Blank if fewer than 2 purchase weeks.
+store_product_weekly_features.csv,reorder_due_next_week,Reorder due next week,nullable int,0/1 for cutoff weeks 1..15; blank for week 16,"1 iff synthetic order will occur in w+1; simulated outcome, not verified demand."
+store_product_weekly_features.csv,feature_cutoff_week,Feature cutoff week,int,Same as week_number,Features must not look beyond this week.
+store_product_weekly_features.csv,temporal_split,Temporal split,str,train (1-9) | validation (10-12) | temporal_test (13-15) | future_scoring (16),Split uses feature-cutoff week; no shuffle.
+labelled_whatsapp_messages.csv,message_id,Message id,str,MSG001 .. MSG040,Exactly 40 synthetic core messages.
+labelled_whatsapp_messages.csv,store_id,Store id,str,STORE001 .. STORE030,Fictional prototype subset of a hypothetical 300-store network.
+labelled_whatsapp_messages.csv,raw_message,Raw message,str,Free-form Hinglish/Hindi/English,Fictional handwritten examples; no real messages.
+labelled_whatsapp_messages.csv,language_style,Language style,str,"English casual, Hinglish, Roman Hindi and risk variants",Qualitative evaluation metadata.
+labelled_whatsapp_messages.csv,intent,Intent,str,new_order | modify_order | ambiguous_order | unknown_product | out_of_stock_request | prompt_injection | privacy_violation_request,Single primary intent; multiple boolean risk flags permitted.
+labelled_whatsapp_messages.csv,expected_sku_ids,Expected sku ids,JSON array[nullable str],"Each requested item: exact known SKU, otherwise null",Aligned by position; [] for non-order privacy-only message.
+labelled_whatsapp_messages.csv,expected_product_names,Expected product names,JSON array[nullable str],"Exact known catalog product_name, or literal unresolved user-requested product","Unknown names are requests, not new catalog records."
+labelled_whatsapp_messages.csv,expected_quantities,Expected quantities,JSON array[nullable int],Parsed requested count; null when conflicting/unknown,"For local units raw count is preserved, not converted."
+labelled_whatsapp_messages.csv,expected_quantity_units,Expected quantity units,JSON array[nullable str],pack or raw unverified local unit; null if not specified,A carton/peti/dabba/packet must not be converted silently.
+labelled_whatsapp_messages.csv,expected_pack_sizes,Expected pack sizes,JSON array[nullable str],"Exact catalog size if SKU resolved, else null",Pack size null for ambiguous/unknown product.
+labelled_whatsapp_messages.csv,expected_availability,Expected availability,JSON array[str],available | out_of_stock | ambiguous_variant | ambiguous_product | unknown_product,Recognizes known unavailable SKU separately from unknown products.
+labelled_whatsapp_messages.csv,requires_clarification,Requires clarification,bool,true | false,True when safe fulfilment requires more user information.
+labelled_whatsapp_messages.csv,clarification_reason,Clarification reason,str,"Reason for a required clarification, else empty","For unknown products/out-of-stock, an informative refusal need not be a question."
+labelled_whatsapp_messages.csv,expected_follow_up_question,Expected follow up question,str,Natural-language follow-up or empty,Non-empty for every requires_clarification=true row.
+labelled_whatsapp_messages.csv,expected_assistant_action,Expected assistant action,str,Expected safe assistant behavior,Always keeps human confirmation and no dispatch.
+labelled_whatsapp_messages.csv,is_catalog_matchable,Is catalog matchable,bool,true iff at least one item and all listed item SKUs known,Does not imply available or safely orderable.
+labelled_whatsapp_messages.csv,contains_unknown_product,Contains unknown product,bool,true | false,"Unknown requested product, not unavailability."
+labelled_whatsapp_messages.csv,contains_out_of_stock_product,Contains out of stock product,bool,true | false,At least one requested known SKU is unavailable.
+labelled_whatsapp_messages.csv,contains_prompt_injection,Contains prompt injection,bool,true | false,Attempts to change system/catalog/price rules.
+labelled_whatsapp_messages.csv,contains_cross_store_privacy_request,Contains cross store privacy request,bool,true | false,Attempts access to another synthetic store history.
+labelled_whatsapp_messages.csv,ground_truth_notes,Ground truth notes,str,Reviewer note / provenance,Manually curated case-level expected responses.
+llm_evaluation_cases.csv,message_id,Message id,str,MSG001 .. MSG040,Exactly 40 synthetic core messages.
+llm_evaluation_cases.csv,evaluation_split,Evaluation split,str,development | held_out_final,Frozen split with disjoint message_id sets.
+llm_evaluation_cases.csv,test_category,Test category,str,Case category (various defined labels),Primary difficulty to score.
+llm_evaluation_cases.csv,expected_behaviour,Expected behaviour,str,Human-readable safe assistant response requirements,Does not claim the LLM has been tested.
+llm_evaluation_cases.csv,pass_criteria,Pass criteria,str,Semicolon-delimited checks for expected behavior,Evaluator must inspect actual assistant responses.
+llm_evaluation_cases.csv,failure_severity,Failure severity,str,medium | high | critical,Critical for manipulation/privacy leaks.
+catalog_edge_cases.csv,edge_case_id,Edge case id,str,EDGE001 upward,Supplementary cases not counted among 40 core messages.
+catalog_edge_cases.csv,test_category,Test category,str,Case category (various defined labels),Primary difficulty to score.
+catalog_edge_cases.csv,raw_test_message,Raw test message,str,Fictional WhatsApp edge input,Not real user data.
+catalog_edge_cases.csv,expected_safe_behaviour,Expected safe behaviour,str,Expected system response or clarification,Manual judgement specification only.
+catalog_edge_cases.csv,reason,Reason,str,Why the case is unsafe or ambiguous,References catalog constraints.
+catalog_edge_cases.csv,expected_sku_id,Expected sku id,nullable str,Exact SKU or blank if unresolved/unknown,No invented valid SKU.
+catalog_edge_cases.csv,test_provenance,Test provenance,str,supplementary_synthetic_test_not_among_40_core,Explicit distinction from 40 core cases.
